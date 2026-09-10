@@ -1,0 +1,740 @@
+{
+  "aws_cloudtrail": {
+    "valid": {
+      "source": "aws_cloudtrail",
+      "tenant": "111122223333",
+      "record": {
+        "eventVersion": "1.11",
+        "eventID": "fee33b13-77f3-5f64-ad3a-5cc563a7a0bf",
+        "eventTime": "2026-01-15T09:00:00Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "DescribeInstances",
+        "awsRegion": "us-east-1",
+        "userIdentity": {
+          "type": "IAMUser",
+          "principalId": "AIDAEXAMPLESYNTHETIC",
+          "arn": "arn:aws:iam::111122223333:user/automation",
+          "accountId": "111122223333",
+          "userName": "automation"
+        },
+        "sourceIPAddress": "10.20.0.15",
+        "userAgent": "aws-cli/2.22.0 Python/3.12.8 Linux/6.8.0",
+        "requestParameters": null,
+        "responseElements": null,
+        "requestID": "c41b4a9e-663b-51a4-88e0-978b13931fd3",
+        "recipientAccountId": "111122223333",
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "readOnly": true,
+        "errorCode": "AccessDenied",
+        "errorMessage": "Synthetic request denied by policy"
+      }
+    },
+    "service_caller": {
+      "source": "aws_cloudtrail",
+      "tenant": "111122223333",
+      "record": {
+        "eventVersion": "1.11",
+        "eventID": "cc383608-a5aa-59e7-93a1-14ac652ace7c",
+        "eventTime": "2026-01-15T09:00:30Z",
+        "eventSource": "sts.amazonaws.com",
+        "eventName": "GetCallerIdentity",
+        "awsRegion": "us-east-1",
+        "userIdentity": {
+          "type": "IAMUser",
+          "principalId": "AIDAEXAMPLESYNTHETIC",
+          "arn": "arn:aws:iam::111122223333:user/automation",
+          "accountId": "111122223333",
+          "userName": "automation"
+        },
+        "sourceIPAddress": "config.amazonaws.com",
+        "userAgent": "aws-cli/2.22.0 Python/3.12.8 Linux/6.8.0",
+        "requestParameters": null,
+        "responseElements": null,
+        "requestID": "b5da02f1-6013-59e4-9d10-0a14eee2d56b",
+        "recipientAccountId": "111122223333",
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "readOnly": true
+      }
+    },
+    "audit_disabled": {
+      "source": "aws_cloudtrail",
+      "tenant": "111122223333",
+      "record": {
+        "eventVersion": "1.11",
+        "eventID": "0276beda-42f4-5d12-9a13-9458f291ca18",
+        "eventTime": "2026-01-15T10:00:00Z",
+        "eventSource": "cloudtrail.amazonaws.com",
+        "eventName": "StopLogging",
+        "awsRegion": "us-east-1",
+        "userIdentity": {
+          "type": "IAMUser",
+          "principalId": "AIDAEXAMPLESYNTHETIC",
+          "arn": "arn:aws:iam::111122223333:user/admin",
+          "accountId": "111122223333",
+          "userName": "admin"
+        },
+        "sourceIPAddress": "203.0.113.10",
+        "userAgent": "aws-cli/2.22.0 Python/3.12.8 Linux/6.8.0",
+        "requestParameters": {
+          "name": "audit-trail"
+        },
+        "responseElements": null,
+        "requestID": "a47c62c6-b758-5fb3-95be-a43b40f6663c",
+        "recipientAccountId": "111122223333",
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "readOnly": false
+      }
+    },
+    "audit_disable_denied": {
+      "source": "aws_cloudtrail",
+      "tenant": "111122223333",
+      "record": {
+        "eventVersion": "1.11",
+        "eventID": "d6114105-66ea-5aae-93b9-303eacbe1fe3",
+        "eventTime": "2026-01-15T10:00:10Z",
+        "eventSource": "cloudtrail.amazonaws.com",
+        "eventName": "StopLogging",
+        "awsRegion": "us-east-1",
+        "userIdentity": {
+          "type": "IAMUser",
+          "principalId": "AIDAEXAMPLESYNTHETIC",
+          "arn": "arn:aws:iam::111122223333:user/admin",
+          "accountId": "111122223333",
+          "userName": "admin"
+        },
+        "sourceIPAddress": "203.0.113.10",
+        "userAgent": "aws-cli/2.22.0 Python/3.12.8 Linux/6.8.0",
+        "requestParameters": {
+          "name": "audit-trail"
+        },
+        "responseElements": null,
+        "requestID": "e8c64ac5-2f63-57f0-ac0d-efedc17dbf4a",
+        "recipientAccountId": "111122223333",
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "readOnly": false,
+        "errorCode": "AccessDenied",
+        "errorMessage": "Synthetic request denied by policy"
+      }
+    },
+    "console_login": {
+      "source": "aws_cloudtrail",
+      "tenant": "111122223333",
+      "record": {
+        "eventVersion": "1.11",
+        "eventID": "10debdae-3179-5bf5-9981-7c8a41b48d98",
+        "eventTime": "2026-01-15T10:00:20Z",
+        "eventSource": "signin.amazonaws.com",
+        "eventName": "ConsoleLogin",
+        "awsRegion": "us-east-1",
+        "userIdentity": {
+          "type": "IAMUser",
+          "principalId": "AIDAEXAMPLESYNTHETIC",
+          "arn": "arn:aws:iam::111122223333:user/admin",
+          "accountId": "111122223333",
+          "userName": "admin"
+        },
+        "sourceIPAddress": "203.0.113.10",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7) AppleWebKit/537.36",
+        "requestParameters": null,
+        "responseElements": {
+          "ConsoleLogin": "Success"
+        },
+        "requestID": "718793b0-5f9f-5f91-a588-de7997dff639",
+        "recipientAccountId": "111122223333",
+        "eventType": "AwsConsoleSignIn",
+        "managementEvent": true,
+        "readOnly": false,
+        "additionalEventData": {
+          "MFAUsed": "Yes"
+        }
+      }
+    },
+    "console_login_failed": {
+      "source": "aws_cloudtrail",
+      "tenant": "111122223333",
+      "record": {
+        "eventVersion": "1.11",
+        "eventID": "dbfb1a8a-4fa6-556e-b0ab-f8d98b133034",
+        "eventTime": "2026-01-15T10:00:30Z",
+        "eventSource": "signin.amazonaws.com",
+        "eventName": "ConsoleLogin",
+        "awsRegion": "us-east-1",
+        "userIdentity": {
+          "type": "IAMUser",
+          "principalId": "AIDAEXAMPLESYNTHETIC",
+          "arn": "arn:aws:iam::111122223333:user/admin",
+          "accountId": "111122223333",
+          "userName": "admin"
+        },
+        "sourceIPAddress": "203.0.113.10",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7) AppleWebKit/537.36",
+        "requestParameters": null,
+        "responseElements": {
+          "ConsoleLogin": "Failure"
+        },
+        "requestID": "0dcadb3e-740f-5663-bcd9-75f45c77c2db",
+        "recipientAccountId": "111122223333",
+        "eventType": "AwsConsoleSignIn",
+        "managementEvent": true,
+        "readOnly": false,
+        "errorMessage": "Failed authentication",
+        "additionalEventData": {
+          "MFAUsed": "Yes"
+        }
+      }
+    }
+  },
+  "gcp_audit": {
+    "valid": {
+      "source": "gcp_audit",
+      "tenant": "acme-prod",
+      "record": {
+        "insertId": "gcp-0000",
+        "logName": "projects/acme-prod/logs/cloudaudit.googleapis.com%2Fdata_access",
+        "resource": {
+          "type": "project",
+          "labels": {
+            "project_id": "acme-prod"
+          }
+        },
+        "timestamp": "2026-01-15T09:00:02Z",
+        "receiveTimestamp": "2026-01-15T09:00:04Z",
+        "severity": "ERROR",
+        "protoPayload": {
+          "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+          "serviceName": "cloudresourcemanager.googleapis.com",
+          "methodName": "GetProject",
+          "authenticationInfo": {
+            "principalEmail": "inventory@acme-prod.iam.gserviceaccount.com"
+          },
+          "requestMetadata": {
+            "callerIp": "10.20.1.20",
+            "callerSuppliedUserAgent": "google-cloud-sdk gcloud/505.0.0"
+          },
+          "resourceName": "projects/acme-prod",
+          "authorizationInfo": [
+            {
+              "resource": "projects/acme-prod",
+              "permission": "resourcemanager.projects.get",
+              "granted": false
+            }
+          ],
+          "status": {
+            "code": 7,
+            "message": "Synthetic permission denied"
+          }
+        }
+      }
+    },
+    "redacted_caller": {
+      "source": "gcp_audit",
+      "tenant": "acme-prod",
+      "record": {
+        "insertId": "gcp-0001",
+        "logName": "projects/acme-prod/logs/cloudaudit.googleapis.com%2Fdata_access",
+        "resource": {
+          "type": "project",
+          "labels": {
+            "project_id": "acme-prod"
+          }
+        },
+        "timestamp": "2026-01-15T09:00:32Z",
+        "receiveTimestamp": "2026-01-15T09:00:34Z",
+        "severity": "NOTICE",
+        "protoPayload": {
+          "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+          "serviceName": "cloudresourcemanager.googleapis.com",
+          "methodName": "GetIamPolicy",
+          "authenticationInfo": {
+            "principalEmail": "inventory@acme-prod.iam.gserviceaccount.com"
+          },
+          "requestMetadata": {
+            "callerIp": "private",
+            "callerSuppliedUserAgent": "google-cloud-sdk gcloud/505.0.0"
+          },
+          "resourceName": "projects/acme-prod",
+          "authorizationInfo": [
+            {
+              "resource": "projects/acme-prod",
+              "permission": "resourcemanager.projects.getIamPolicy",
+              "granted": true
+            }
+          ]
+        }
+      }
+    },
+    "iam_changed": {
+      "source": "gcp_audit",
+      "tenant": "acme-prod",
+      "record": {
+        "insertId": "gcp-0040",
+        "logName": "projects/acme-prod/logs/cloudaudit.googleapis.com%2Factivity",
+        "resource": {
+          "type": "project",
+          "labels": {
+            "project_id": "acme-prod"
+          }
+        },
+        "timestamp": "2026-01-15T10:00:02Z",
+        "receiveTimestamp": "2026-01-15T10:00:04Z",
+        "severity": "NOTICE",
+        "protoPayload": {
+          "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+          "serviceName": "cloudresourcemanager.googleapis.com",
+          "methodName": "SetIamPolicy",
+          "authenticationInfo": {
+            "principalEmail": "admin@example.test"
+          },
+          "requestMetadata": {
+            "callerIp": "2001:db8::15",
+            "callerSuppliedUserAgent": "google-cloud-sdk gcloud/505.0.0"
+          },
+          "resourceName": "projects/acme-prod",
+          "authorizationInfo": [
+            {
+              "resource": "projects/acme-prod",
+              "permission": "resourcemanager.projects.setIamPolicy",
+              "granted": true
+            }
+          ],
+          "request": {
+            "policy": {
+              "bindings": [
+                {
+                  "role": "roles/viewer",
+                  "members": [
+                    "user:analyst@example.test"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "iam_denied": {
+      "source": "gcp_audit",
+      "tenant": "acme-prod",
+      "record": {
+        "insertId": "gcp-0041",
+        "logName": "projects/acme-prod/logs/cloudaudit.googleapis.com%2Factivity",
+        "resource": {
+          "type": "project",
+          "labels": {
+            "project_id": "acme-prod"
+          }
+        },
+        "timestamp": "2026-01-15T10:00:12Z",
+        "receiveTimestamp": "2026-01-15T10:00:14Z",
+        "severity": "ERROR",
+        "protoPayload": {
+          "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+          "serviceName": "cloudresourcemanager.googleapis.com",
+          "methodName": "SetIamPolicy",
+          "authenticationInfo": {
+            "principalEmail": "admin@example.test"
+          },
+          "requestMetadata": {
+            "callerIp": "2001:db8::15",
+            "callerSuppliedUserAgent": "google-cloud-sdk gcloud/505.0.0"
+          },
+          "resourceName": "projects/acme-prod",
+          "authorizationInfo": [
+            {
+              "resource": "projects/acme-prod",
+              "permission": "resourcemanager.projects.setIamPolicy",
+              "granted": false
+            }
+          ],
+          "request": {
+            "policy": {
+              "bindings": [
+                {
+                  "role": "roles/viewer",
+                  "members": [
+                    "user:analyst@example.test"
+                  ]
+                }
+              ]
+            }
+          },
+          "status": {
+            "code": 7,
+            "message": "Synthetic permission denied"
+          }
+        }
+      }
+    }
+  },
+  "okta": {
+    "valid": {
+      "source": "okta",
+      "tenant": "acme.okta.example.test",
+      "record": {
+        "uuid": "d56168ae-4ec2-5743-a243-314a1b5adff5",
+        "published": "2026-01-15T09:00:04Z",
+        "eventType": "user.session.start",
+        "version": "0",
+        "severity": "INFO",
+        "displayMessage": "User login to Okta",
+        "actor": {
+          "id": "00u00000000000000000",
+          "type": "User",
+          "alternateId": "analyst0@example.test",
+          "displayName": "Example Analyst"
+        },
+        "client": {
+          "ipAddress": "10.20.2.1",
+          "device": "Computer",
+          "userAgent": {
+            "os": "Mac OS X",
+            "browser": "CHROME",
+            "rawUserAgent": "Synthetic browser"
+          },
+          "zone": "CORPORATE"
+        },
+        "outcome": {
+          "result": "SUCCESS",
+          "reason": null
+        },
+        "authenticationContext": {
+          "authenticationProvider": "OKTA_AUTHENTICATION_PROVIDER",
+          "authenticationStep": 0,
+          "externalSessionId": "example-session-0"
+        },
+        "transaction": {
+          "type": "WEB",
+          "id": "fc6081d1-c061-50e9-adae-67c04787532b"
+        },
+        "target": []
+      }
+    },
+    "login_success": {
+      "source": "okta",
+      "tenant": "acme.okta.example.test",
+      "record": {
+        "uuid": "efdb97ec-4516-5b47-89ac-ef561194e91f",
+        "published": "2026-01-15T10:01:04Z",
+        "eventType": "user.session.start",
+        "version": "0",
+        "severity": "INFO",
+        "displayMessage": "User login to Okta",
+        "actor": {
+          "id": "00u00000000000000099",
+          "type": "User",
+          "alternateId": "admin@example.test",
+          "displayName": "Example Admin"
+        },
+        "client": {
+          "ipAddress": "203.0.113.10",
+          "device": "Computer",
+          "userAgent": {
+            "os": "Mac OS X",
+            "browser": "CHROME",
+            "rawUserAgent": "Synthetic browser"
+          },
+          "zone": "OFF_NETWORK"
+        },
+        "outcome": {
+          "result": "SUCCESS",
+          "reason": null
+        },
+        "authenticationContext": {
+          "authenticationProvider": "OKTA_AUTHENTICATION_PROVIDER",
+          "authenticationStep": 0,
+          "externalSessionId": "example-session-43"
+        },
+        "transaction": {
+          "type": "WEB",
+          "id": "5b69c459-9167-561f-8547-e70fce3d3a69"
+        },
+        "target": []
+      }
+    }
+  },
+  "github": {
+    "valid": {
+      "source": "github",
+      "tenant": "acme-example",
+      "record": {
+        "_document_id": "7eff0a5b-aba2-5746-a364-155ddc3d562f",
+        "@timestamp": 1768467610000,
+        "created_at": 1768467610000,
+        "action": "repo.create",
+        "actor": "acme-developer-0",
+        "actor_id": 10000,
+        "org": "acme-example",
+        "org_id": 20000,
+        "repo": "acme-example/service-0",
+        "repo_id": 31000,
+        "actor_ip": "10.20.4.1",
+        "user_agent": "git/2.47.1",
+        "business": "acme-enterprise",
+        "business_id": 40000
+      }
+    },
+    "visibility_changed": {
+      "source": "github",
+      "tenant": "acme-example",
+      "record": {
+        "_document_id": "b6706cb0-30a1-58c0-bd37-7d62bd8448c7",
+        "@timestamp": 1768471210000,
+        "created_at": 1768471210000,
+        "action": "repo.access",
+        "actor": "acme-admin",
+        "actor_id": 10004,
+        "org": "acme-example",
+        "org_id": 20000,
+        "repo": "acme-example/payments",
+        "repo_id": 30000,
+        "actor_ip": "203.0.113.10",
+        "user_agent": "git/2.47.1",
+        "business": "acme-enterprise",
+        "business_id": 40000,
+        "visibility": "public",
+        "previous_visibility": "private"
+      }
+    }
+  },
+  "osquery_linux": {
+    "valid": {
+      "source": "osquery_linux",
+      "tenant": "acme-fleet",
+      "record": {
+        "name": "process_events",
+        "hostIdentifier": "linux-build-01",
+        "calendarTime": "Thu Jan 15 09:00:11 2026 UTC",
+        "unixTime": 1768467611,
+        "epoch": 0,
+        "counter": 1,
+        "numerics": false,
+        "action": "added",
+        "columns": {
+          "time": "1768467606",
+          "pid": "2000",
+          "path": "/usr/bin/python3",
+          "uid": "1000",
+          "euid": "1000",
+          "gid": "1000",
+          "parent": "900",
+          "cmdline": "/usr/bin/python3 --version",
+          "cwd": "/home/analyst",
+          "auid": "1000"
+        }
+      }
+    },
+    "suspicious_start": {
+      "source": "osquery_linux",
+      "tenant": "acme-fleet",
+      "record": {
+        "name": "process_events",
+        "hostIdentifier": "linux-build-01",
+        "calendarTime": "Thu Jan 15 10:00:11 2026 UTC",
+        "unixTime": 1768471211,
+        "epoch": 0,
+        "counter": 41,
+        "numerics": false,
+        "action": "added",
+        "columns": {
+          "time": "1768471206",
+          "pid": "4812",
+          "path": "/usr/bin/nc",
+          "uid": "1000",
+          "euid": "1000",
+          "gid": "1000",
+          "parent": "900",
+          "cmdline": "/usr/bin/nc 198.51.100.24 443",
+          "cwd": "/home/analyst",
+          "auid": "1000"
+        }
+      }
+    },
+    "connection_failed": {
+      "source": "osquery_linux",
+      "tenant": "acme-fleet",
+      "record": {
+        "name": "socket_events",
+        "hostIdentifier": "linux-build-01",
+        "calendarTime": "Thu Jan 15 10:00:21 2026 UTC",
+        "unixTime": 1768471221,
+        "epoch": 0,
+        "counter": 42,
+        "numerics": false,
+        "action": "added",
+        "columns": {
+          "time": "1768471216",
+          "pid": "4812",
+          "path": "/usr/bin/nc",
+          "status": "failed",
+          "action": "connect",
+          "remote_address": "198.51.100.24",
+          "remote_port": "443",
+          "local_address": "10.20.3.10",
+          "local_port": "40041",
+          "family": "2",
+          "auid": "1000"
+        }
+      }
+    },
+    "connection_succeeded": {
+      "source": "osquery_linux",
+      "tenant": "acme-fleet",
+      "record": {
+        "name": "socket_events",
+        "hostIdentifier": "linux-build-01",
+        "calendarTime": "Thu Jan 15 10:00:31 2026 UTC",
+        "unixTime": 1768471231,
+        "epoch": 0,
+        "counter": 43,
+        "numerics": false,
+        "action": "added",
+        "columns": {
+          "time": "1768471226",
+          "pid": "4812",
+          "path": "/usr/bin/nc",
+          "status": "succeeded",
+          "action": "connect",
+          "remote_address": "198.51.100.24",
+          "remote_port": "443",
+          "local_address": "10.20.3.10",
+          "local_port": "40042",
+          "family": "2",
+          "auid": "1000"
+        }
+      }
+    },
+    "socket_bind": {
+      "source": "osquery_linux",
+      "tenant": "acme-fleet",
+      "record": {
+        "name": "socket_events",
+        "hostIdentifier": "linux-build-01",
+        "calendarTime": "Thu Jan 15 10:00:51 2026 UTC",
+        "unixTime": 1768471251,
+        "epoch": 0,
+        "counter": 45,
+        "numerics": false,
+        "action": "added",
+        "columns": {
+          "time": "1768471246",
+          "pid": "4812",
+          "path": "/usr/bin/nc",
+          "status": "succeeded",
+          "action": "bind",
+          "remote_address": "198.51.100.24",
+          "remote_port": "443",
+          "local_address": "10.20.3.10",
+          "local_port": "40044",
+          "family": "2",
+          "auid": "1000"
+        }
+      }
+    }
+  },
+  "osquery_macos": {
+    "valid": {
+      "source": "osquery_macos",
+      "tenant": "acme-fleet",
+      "record": {
+        "name": "es_process_events",
+        "hostIdentifier": "mac-finance-01",
+        "calendarTime": "Thu Jan 15 09:00:13 2026 UTC",
+        "unixTime": 1768467613,
+        "epoch": 0,
+        "counter": 1,
+        "numerics": false,
+        "action": "added",
+        "columns": {
+          "time": "1768467608",
+          "pid": "2000",
+          "path": "/usr/bin/ditto",
+          "uid": "501",
+          "euid": "501",
+          "gid": "20",
+          "parent": "900",
+          "cmdline": "/usr/bin/ditto --version",
+          "cwd": "/Users/analyst",
+          "event_type": "exec",
+          "username": "analyst",
+          "pidversion": "1",
+          "signing_id": "com.apple.ditto",
+          "team_id": "",
+          "platform_binary": "1",
+          "seq_num": "1",
+          "global_seq_num": "100"
+        }
+      }
+    },
+    "suspicious_exec": {
+      "source": "osquery_macos",
+      "tenant": "acme-fleet",
+      "record": {
+        "name": "es_process_events",
+        "hostIdentifier": "mac-finance-01",
+        "calendarTime": "Thu Jan 15 10:00:13 2026 UTC",
+        "unixTime": 1768471213,
+        "epoch": 0,
+        "counter": 41,
+        "numerics": false,
+        "action": "added",
+        "columns": {
+          "time": "1768471208",
+          "pid": "2040",
+          "path": "/usr/bin/nc",
+          "uid": "501",
+          "euid": "501",
+          "gid": "20",
+          "parent": "900",
+          "cmdline": "/usr/bin/nc 198.51.100.24 443",
+          "cwd": "/Users/analyst",
+          "event_type": "exec",
+          "username": "analyst",
+          "pidversion": "41",
+          "signing_id": "com.apple.nc",
+          "team_id": "",
+          "platform_binary": "1",
+          "seq_num": "41",
+          "global_seq_num": "140"
+        }
+      }
+    },
+    "process_exit": {
+      "source": "osquery_macos",
+      "tenant": "acme-fleet",
+      "record": {
+        "name": "es_process_events",
+        "hostIdentifier": "mac-finance-01",
+        "calendarTime": "Thu Jan 15 10:00:23 2026 UTC",
+        "unixTime": 1768471223,
+        "epoch": 0,
+        "counter": 42,
+        "numerics": false,
+        "action": "added",
+        "columns": {
+          "time": "1768471218",
+          "pid": "2040",
+          "path": "/usr/bin/nc",
+          "uid": "501",
+          "euid": "501",
+          "gid": "20",
+          "parent": "900",
+          "cmdline": "/usr/bin/nc 198.51.100.24 443",
+          "cwd": "/Users/analyst",
+          "event_type": "exit",
+          "username": "analyst",
+          "pidversion": "41",
+          "signing_id": "com.apple.nc",
+          "team_id": "",
+          "platform_binary": "1",
+          "seq_num": "42",
+          "global_seq_num": "141",
+          "exit_code": "0"
+        }
+      }
+    }
+  }
+}

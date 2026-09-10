@@ -1,0 +1,11 @@
+{
+  "privileged_users": ["admin@example.test"],
+  "sensitive_assets": ["finance-laptop", "audit-trail"],
+  "internal_networks": ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "fc00::/7"],
+  "rules": [
+    {"id": "audit-disabled", "title": "Cloud audit logging disabled", "severity": "critical", "risk": 80, "event_type": "cloud", "action": "StopLogging", "outcome": "success"},
+    {"id": "suspicious-executable", "title": "Potentially risky executable started", "severity": "medium", "risk": 35, "event_type": "endpoint", "action": "process_start", "process_names": ["powershell.exe", "nc", "ncat"]},
+    {"id": "privileged-login", "title": "Privileged account signed in", "severity": "low", "risk": 15, "event_type": "authentication", "action": "login", "outcome": "success", "privileged_only": true}
+  ],
+  "correlation": {"enabled": true, "window_seconds": 300, "failed_login_threshold": 3, "suspicious_processes": ["powershell.exe", "nc", "ncat"]}
+}

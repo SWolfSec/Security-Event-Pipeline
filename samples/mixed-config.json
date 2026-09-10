@@ -1,0 +1,115 @@
+{
+  "privileged_users": [
+    "admin@example.test",
+    "arn:aws:iam::111122223333:user/admin",
+    "acme-admin"
+  ],
+  "sensitive_assets": [
+    "finance-laptop",
+    "audit-trail",
+    "acme.okta.example.test",
+    "projects/acme-prod",
+    "projects/acme-prod/sinks/security-export",
+    "mac-finance-01",
+    "linux-build-01",
+    "acme-example/payments"
+  ],
+  "internal_networks": [
+    "10.0.0.0/8",
+    "172.16.0.0/12",
+    "192.168.0.0/16",
+    "fc00::/7"
+  ],
+  "rules": [
+    {
+      "id": "audit-disabled",
+      "title": "Cloud audit logging disabled",
+      "severity": "critical",
+      "risk": 80,
+      "event_type": "cloud",
+      "action": "StopLogging",
+      "outcome": "success"
+    },
+    {
+      "id": "suspicious-executable",
+      "title": "Potentially risky executable started",
+      "severity": "medium",
+      "risk": 35,
+      "event_type": "endpoint",
+      "action": "process_start",
+      "process_names": [
+        "powershell.exe",
+        "nc",
+        "ncat"
+      ]
+    },
+    {
+      "id": "privileged-login",
+      "title": "Privileged account signed in",
+      "severity": "low",
+      "risk": 15,
+      "event_type": "authentication",
+      "action": "login",
+      "outcome": "success",
+      "privileged_only": true
+    },
+    {
+      "id": "gcp-iam-policy",
+      "title": "GCP project IAM policy changed",
+      "source": "gcp_audit",
+      "severity": "high",
+      "risk": 55,
+      "event_type": "cloud",
+      "action": "SetIamPolicy",
+      "outcome": "success"
+    },
+    {
+      "id": "gcp-sink-deleted",
+      "title": "GCP logging sink deleted",
+      "source": "gcp_audit",
+      "severity": "high",
+      "risk": 75,
+      "event_type": "cloud",
+      "action": "google.logging.v2.ConfigServiceV2.DeleteSink",
+      "outcome": "success"
+    },
+    {
+      "id": "okta-mfa-reset",
+      "title": "Okta user MFA factors reset",
+      "source": "okta",
+      "severity": "high",
+      "risk": 60,
+      "event_type": "authentication",
+      "action": "user.mfa.factor.reset_all",
+      "outcome": "success"
+    },
+    {
+      "id": "github-visibility",
+      "title": "GitHub repository visibility changed",
+      "source": "github",
+      "severity": "high",
+      "risk": 55,
+      "event_type": "saas",
+      "action": "repo.access"
+    },
+    {
+      "id": "github-repo-deleted",
+      "title": "GitHub repository deleted",
+      "source": "github",
+      "severity": "high",
+      "risk": 65,
+      "event_type": "saas",
+      "action": "repo.destroy"
+    }
+  ],
+  "correlation": {
+    "enabled": true,
+    "window_seconds": 300,
+    "failed_login_threshold": 3,
+    "suspicious_processes": [
+      "powershell.exe",
+      "nc",
+      "ncat"
+    ]
+  }
+}

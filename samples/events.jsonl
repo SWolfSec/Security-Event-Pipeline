@@ -1,0 +1,9 @@
+{"id":"auth-1","timestamp":"2026-01-15T10:00:00Z","type":"authentication","action":"login","outcome":"failure","username":"admin@example.test","host":"finance-laptop","src_ip":"203.0.113.10"}
+{"id":"auth-2","timestamp":"2026-01-15T10:00:30Z","type":"authentication","action":"login","outcome":"failure","username":"admin@example.test","host":"finance-laptop","src_ip":"203.0.113.10"}
+{"id":"auth-3","timestamp":"2026-01-15T10:01:00Z","type":"authentication","action":"login","outcome":"failure","username":"admin@example.test","host":"finance-laptop","src_ip":"203.0.113.10"}
+{"id":"auth-4","timestamp":"2026-01-15T10:01:20Z","type":"authentication","action":"login","outcome":"success","username":"admin@example.test","host":"finance-laptop","src_ip":"203.0.113.10"}
+{"id":"proc-1","timestamp":"2026-01-15T10:02:00Z","type":"endpoint","action":"process_start","host":"finance-laptop","username":"admin@example.test","image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","pid":"4812"}
+{"id":"net-1","timestamp":"2026-01-15T10:02:15Z","type":"endpoint","action":"network_connect","host":"finance-laptop","pid":"4812","dst_ip":"198.51.100.24"}
+{"id":"cloud-1","timestamp":"2026-01-15T10:03:00Z","type":"cloud","action":"StopLogging","outcome":"success","actor":"admin@example.test","resource":"audit-trail","src_ip":"203.0.113.10"}
+{"id":"benign-1","timestamp":"2026-01-15T10:04:00Z","type":"authentication","action":"login","outcome":"success","username":"analyst@example.test","host":"workstation-7","src_ip":"10.2.0.8"}
+{"id":"benign-2","timestamp":"2026-01-15T10:04:30Z","type":"cloud","action":"ListBuckets","outcome":"success","actor":"analyst@example.test","src_ip":"10.2.0.8"}
